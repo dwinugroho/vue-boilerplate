@@ -1,0 +1,88 @@
+{
+  "private": true,
+  "name": "vue-boilerplate",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "run-p type-check \"build-only {@}\" --",
+    "build-only": "vite build",
+    "dev": "vite",
+    "format": "prettier --write src/",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "prepare": "husky",
+    "test:unit": "vitest",
+    "type-check": "vue-tsc --build --force",
+    "preview": "vite preview"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-emoji-conventional"
+    }
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.10.1",
+    "@unhead/vue": "^1.9.16",
+    "@vueuse/core": "^10.11.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.408.0",
+    "pinia": "^2.1.7",
+    "radix-vue": "^1.9.1",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "v-lazy-image": "^2.1.1",
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.8.0",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^20.14.11",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.19",
+    "cz-emoji-conventional": "^1.0.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.0.0",
+    "eslint-plugin-vue": "^9.23.0",
+    "husky": "^9.0.11",
+    "jsdom": "^24.1.0",
+    "lint-staged": "^15.2.7",
+    "npm-run-all2": "^6.2.0",
+    "postcss": "^8.4.39",
+    "prettier": "^3.2.5",
+    "prettier-plugin-package-perfection": "^1.1.0",
+    "prettier-plugin-sort-json": "^4.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "sharp": "^0.33.4",
+    "svgo": "^3.3.2",
+    "tailwindcss": "^3.4.6",
+    "typescript": "~5.4.0",
+    "vite": "^5.3.1",
+    "vite-plugin-image-optimizer": "^1.1.8",
+    "vite-plugin-vue-devtools": "^7.3.1",
+    "vite-svg-loader": "^5.1.0",
+    "vitest": "^1.6.0",
+    "vue-tsc": "^2.0.21"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "lint-staged": {
+    "./src/**/*.{js,jsx,ts,tsx,vue}": [
+      "yarn format",
+      "yarn lint --fix"
+    ],
+    "./src/**/*.{css,scss,md,html,json}": [
+      "yarn format"
+    ]
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
+}
