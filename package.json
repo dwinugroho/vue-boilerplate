@@ -22,7 +22,6 @@
   "dependencies": {
     "@t3-oss/env-core": "^0.10.1",
     "@unhead/vue": "^1.9.16",
-    "@vueuse/core": "^10.11.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.408.0",
@@ -32,6 +31,7 @@
     "tailwindcss-animate": "^1.0.7",
     "v-lazy-image": "^2.1.1",
     "vue": "^3.4.29",
+    "vue-query": "^1.26.0",
     "vue-router": "^4.3.3",
     "zod": "^3.23.8"
   },

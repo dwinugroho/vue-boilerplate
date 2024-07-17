@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useHead } from '@unhead/vue'
+import { useQueryProvider } from 'vue-query'
 import { RouterView } from 'vue-router'
+
+useQueryProvider()
 
 useHead({
   titleTemplate(title) {

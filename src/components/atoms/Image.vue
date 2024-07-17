@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import VLazyImage from 'v-lazy-image'
-import { ImgHTMLAttributes, ref } from 'vue'
+import { type ImgHTMLAttributes, ref } from 'vue'
 
 import { cn } from '@/lib/utils'
 
