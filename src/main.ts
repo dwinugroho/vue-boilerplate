@@ -1,22 +1,22 @@
 import './styles/main.css'
 
+import {
+  QueryClient,
+  VueQueryPlugin,
+  type VueQueryPluginOptions
+} from '@tanstack/vue-query'
 import { createHead } from '@unhead/vue'
 import { createPinia } from 'pinia'
 import { createApp } from 'vue'
-import { VueQueryPlugin, type VueQueryPluginOptions } from 'vue-query'
 
 import App from './App.vue'
 import router from './router'
 
-const vueQueryPluginOptions: VueQueryPluginOptions = {
-  queryClientConfig: {
-    defaultOptions: {
-      queries: {
-        refetchOnWindowFocus: false
-      }
-    }
-  }
-}
+const queryClient = new QueryClient({
+  defaultOptions: { queries: { refetchOnWindowFocus: false, retry: 1 } }
+})
+
+const vueQueryPluginOptions: VueQueryPluginOptions = { queryClient }
 
 const app = createApp(App)
 

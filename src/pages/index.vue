@@ -1,21 +1,18 @@
 <script setup lang="ts">
+import { useQuery } from '@tanstack/vue-query'
 import { useHead } from '@unhead/vue'
-import { useQuery } from 'vue-query'
 
 import { Button } from '@/components/ui/button'
-import { getTodo } from '@/lib/services/todos'
+import { getTodos } from '@/lib/services/todos'
 
 useHead({
   title: 'Home'
 })
 
-const { data, isFetching, isError, refetch } = useQuery(
-  'todos',
-  () => getTodo({ _limit: 10 }),
-  {
-    refetchOnWindowFocus: false
-  }
-)
+const { data, isFetching, isError, refetch } = useQuery({
+  queryKey: ['todos'],
+  queryFn: () => getTodos({ _limit: 10 })
+})
 </script>
 
 <template>

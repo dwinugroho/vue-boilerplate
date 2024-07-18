@@ -15,7 +15,10 @@ const useFetch = async <T>(
   endPoint: string,
   options: FetchOptions = {}
 ): Promise<T> => {
-  const url = new URL(env.VITE_PUBLIC_API_URL + endPoint)
+  const url = new URL(
+    env.VITE_PUBLIC_API_URL +
+      (endPoint.startsWith('/') ? endPoint : '/' + endPoint)
+  )
 
   if (options.params) {
     Object.keys(options.params).forEach((key) => {
