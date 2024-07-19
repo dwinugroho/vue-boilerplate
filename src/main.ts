@@ -13,7 +13,7 @@ import App from './App.vue'
 import router from './router'
 
 const queryClient = new QueryClient({
-  defaultOptions: { queries: { refetchOnWindowFocus: false, retry: 1 } }
+  defaultOptions: { queries: { refetchOnWindowFocus: false, retry: 0 } }
 })
 
 const vueQueryPluginOptions: VueQueryPluginOptions = { queryClient }
