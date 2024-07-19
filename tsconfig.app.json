@@ -10,5 +10,11 @@
   },
   "exclude": ["src/**/__tests__/*"],
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"]
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "src/typed-router.d.ts",
+    "vite-plugin-pages/client"
+  ]
 }
